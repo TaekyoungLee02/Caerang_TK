@@ -12,22 +12,21 @@ class Main {
 		A = input.nextInt();
 		B = input.nextInt();
 		C = input.nextInt();
-		input.nextLine();
 		D = input.nextInt();
 		
 		C += D;
 		
-		if (C >= 60)
+		if (C > 59)
 		{
 			B += C / 60;
 			C = C % 60;
-			if (B >= 60)
+			if (B > 59)
 			{
 				A += B / 60;
 				B = B % 60;
-				if (A >= 24)
+				if (A > 23)
 				{
-					A = 0;
+					A = A % 24;
 				}
 			}
 		}
